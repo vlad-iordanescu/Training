@@ -1,0 +1,14 @@
+package AnimalFarm;
+
+public class Animal {
+	public int NrOfLegs;
+	public int Height;
+	public int Width;
+	public String Mood;
+	public Boolean Fertil;
+	public String Name;
+	public int ID;
+	public int IDFather;
+	public int IDMother;
+		
+}

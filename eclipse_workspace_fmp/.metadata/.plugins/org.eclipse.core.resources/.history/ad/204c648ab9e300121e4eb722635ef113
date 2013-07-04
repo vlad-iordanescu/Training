@@ -1,0 +1,25 @@
+package Shop;
+
+import java.util.LinkedList;
+import java.util.List;
+
+
+public class ListaProduse {
+	
+	private List<Produs> lista = new LinkedList<Produs>();
+	
+	public void addToListaProdus(Produs prod) {
+		lista.add(prod);
+	}
+	
+	public Produs getProdus(int index){
+		return lista.get(index);
+	}
+	
+	public boolean isEmpty() {
+		if(lista.isEmpty())
+			return true;
+		return false;
+	}
+
+}

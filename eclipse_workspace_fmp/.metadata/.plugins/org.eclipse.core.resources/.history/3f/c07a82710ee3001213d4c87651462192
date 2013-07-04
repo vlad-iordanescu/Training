@@ -1,0 +1,44 @@
+package vanzareMasini;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class AgentDeVanzare<T> {
+
+	private String nume;
+
+	private List<Cars<T>> Vanzari;
+
+	public String getNume() {
+		return nume;
+	}
+
+	public void setNume(String nume) {
+		this.nume = nume;
+	}
+
+	public Cars<T> getVanzare(int i) {
+		return Vanzari.get(i);
+	}
+
+	public void addVanzari(Cars<T> vanzare) {
+		Vanzari.add(vanzare);
+	}
+
+	public List<Cars<T>> getList() {
+		return Vanzari;
+	}
+	
+
+
+	public void mysort() {
+		int i=0;
+		while(Vanzari.get(i)!=null) {
+			Collections.sort(Vanzari,new Comparator<Vanzare<Car>>() {
+			});
+			i++;
+		}
+	}
+
+}

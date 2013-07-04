@@ -1,0 +1,21 @@
+package Shop;
+
+import java.util.LinkedList;
+import java.util.List;
+
+
+public class ListaProduse {
+	
+	private List<Produs> lista = new LinkedList<Produs>();
+	
+	private Object magazin;
+	
+	public void addToListaProdus(Produs prod) {
+		lista.add(prod);
+	}
+	
+	public Produs getProdus(int index){
+		return lista.get(index);
+	}
+
+}

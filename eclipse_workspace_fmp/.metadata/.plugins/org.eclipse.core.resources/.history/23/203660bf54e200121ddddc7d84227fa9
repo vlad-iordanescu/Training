@@ -1,0 +1,10 @@
+package AbstractWeaponsDealer;
+
+public class Client {
+	public static void main(String args[]){
+		WeaponsShop x = new WeaponsShop();
+		MachineGuns gun = WeaponsShop.Create1(args[0]);
+		Shotguns gun = WeaponsShop.Create2(args[0]);
+		HandGuns gun = WeaponsShop.Create3(args[0]);
+	}
+}

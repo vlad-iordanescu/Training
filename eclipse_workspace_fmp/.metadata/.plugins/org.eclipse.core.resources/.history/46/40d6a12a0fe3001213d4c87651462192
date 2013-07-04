@@ -1,0 +1,14 @@
+package vanzareMasini;
+
+public class Main {
+	
+	
+	public <T> void mysort(AgentDeVanzare<T> t) {
+		t.mysort();
+	}
+	
+	public static void main() {
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+package WordCount;
+
+public class Number {
+	private int count;
+
+}

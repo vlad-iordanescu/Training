@@ -1,0 +1,32 @@
+package Shop;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class ListaProduse {
+
+	private Queue<Produs> lista = new LinkedList<Produs>();
+	private Object lock = new Object();
+	private int i = 0;
+
+	public void addToListaProdus(Produs prod) {
+		synchronized (lock) {
+			lista.add(prod);
+			System.out.println("Produs added"+i);
+			i++;
+			lock.notify();
+		}
+
+	}
+
+	public Produs getProdus() throws InterruptedException {
+		synchronized (lock) {
+			if (lista.isEmpty()){
+				lock.wait();
+			}
+			System.out.println("Produs taken"+i);
+			return lista.poll();
+		}
+	}
+
+}

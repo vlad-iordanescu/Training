@@ -1,0 +1,26 @@
+package Shop;
+
+import java.util.Random;
+
+public class ThreadConsumator extends Thread {
+
+	private ListaProduse lst = new ListaProduse();
+	Random nr= new Random();
+	Produs prod = new Produs();
+
+	public ThreadConsumator(ListaProduse lst) {
+		this.lst = lst;
+	}
+
+	public void run() {
+		for (int i = 0; i < nr.nextInt(); i++) {
+			try {
+				prod = lst.getProdus();
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

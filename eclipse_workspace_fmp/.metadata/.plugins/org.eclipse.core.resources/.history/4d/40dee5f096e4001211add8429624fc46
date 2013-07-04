@@ -1,0 +1,46 @@
+package com.crispico.dao.impl;
+
+import java.util.Set;
+
+import javax.persistence.*;
+
+import com.crispica.model.*;
+import com.crispico.dao.*;
+
+public class ClientJPADao implements ClientDao {
+
+	private EntityManager em;
+
+	public ClientJPADao(EntityManager en){
+		this.em=en;
+	}
+	
+	@Override
+	public void serverOrUpdate(Client client) {
+		if (em.find(Client.class,client.getId()) != null)
+			em.merge(client);
+		else {
+			em.persist(client);
+			em.getTransaction().commit();
+		}
+
+	}
+
+	@Override
+	public Client loadByID(Integer id) {
+		return em.find(Client.class, 1);
+	}
+
+	@Override
+	public Set<Client> loadAll() {
+		Query query = em.createQuery("select c from Client c");
+		return (Set<Client>) query.getResultList();
+	}
+
+	@Override
+	public void remove(Client client) {
+		em.remove(client);
+
+	}
+
+}

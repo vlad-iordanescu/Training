@@ -1,0 +1,14 @@
+package vanzareMasini;
+import java.util.*;
+
+public class myComparator<T> implements Comparator<Cars<T>>{
+	
+	
+	public int compare(Cars<T> t1, Cars<T> t2) {
+		int a1=t1.getSpeed();
+		int a2=t2.getSpeed();
+		return a1.compare(a2);
+
+	}
+
+}

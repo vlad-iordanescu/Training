@@ -1,0 +1,14 @@
+package Shop;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ListaProduse lst = new ListaProduse();
+		
+		ThreadProducator producator = new ThreadProducator(lst);
+		ThreadConsumator consumator = new ThreadConsumator(lst);
+	}
+
+}

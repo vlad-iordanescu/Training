@@ -1,0 +1,23 @@
+package Shop;
+
+import java.lang.Object;
+
+
+public class Main {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		ListaProduse lst = new ListaProduse();
+		
+		ThreadProducator producator = new ThreadProducator(lst);
+		ThreadConsumator consumator = new ThreadConsumator(lst);
+		
+		consumator.start();
+		producator.start();
+
+		
+		producator.join();
+		consumator.join();
+	}
+
+}

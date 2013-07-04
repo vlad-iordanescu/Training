@@ -1,0 +1,23 @@
+package executor;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
+public class runnable {
+	
+	public static void main(String[] args) {
+		
+		Executor execute = Executors.newFixedThreadPool(3) ;
+		
+		execute.execute(new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				
+			}
+		});
+		
+	}
+
+}

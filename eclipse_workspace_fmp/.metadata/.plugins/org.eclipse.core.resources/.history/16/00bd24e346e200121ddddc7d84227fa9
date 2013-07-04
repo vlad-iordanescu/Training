@@ -1,0 +1,8 @@
+package AnimalFarm;
+
+public class AnimalCreation implements AnimalProp {
+
+	public Animal createProduct(int ID);
+	
+
+}

@@ -1,0 +1,44 @@
+package AbstractWeaponsDealer;
+
+public class MachineGuns extends AbstractWeaponFactory{
+	public String Name;
+	private String Type;
+	private String Ammotype;
+	private int AmmoNumber;
+	public  String getType() {
+		return Type;
+	}
+	public  void  setType(String prop) {
+		
+	}
+	public  void setAmmoType(String prop) {
+		
+	}
+	public  void setAmmoNumber(int prop) {
+		
+	}
+	public  String getAmmoType() {
+		return Ammotype;
+	}
+	public  int getAmmoNumber() {
+		return AmmoNumber;
+	}
+
+	
+	public class TommyGun extends MachineGuns{
+		String Name = "TommyGun";
+		public  String getType() {
+			return "Semi-Automatic";
+		}
+		public  String getAmmoType() {
+			return "NormalShells";
+		}
+		public  int getAmmoNumber() {
+			return 32;
+		}
+	}
+	public  MachineGuns Create(String Name){
+		if (Name.equals("TommyGun"))
+			return TommyGun();
+	}
+}

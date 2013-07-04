@@ -1,0 +1,12 @@
+package Lock;
+
+
+public class ReadWriteLock {
+	
+	private ReadWriteLock lock = new ReadWriteLock();
+	
+	public static void main(String[] args) {
+
+	}
+}
+	

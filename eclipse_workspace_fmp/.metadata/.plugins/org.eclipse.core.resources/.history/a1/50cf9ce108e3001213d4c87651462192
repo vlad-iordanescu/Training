@@ -1,0 +1,11 @@
+package vanzareMasini;
+
+
+public class AgentDeVanzare<T> {
+	
+	private String nume;
+	
+	private List<Cars> Vanzari;
+	
+
+}

@@ -1,0 +1,47 @@
+package vanzareMasini;
+
+public class Main {
+
+	public static void main(String() args) {
+		AgentDeVanzare<Car> A = new AgentDeVanzare<>();
+		Vanzare<Car> a = new Vanzare<>();
+		Vanzare<Car> b = new Vanzare<>();
+		Vanzare<Car> c = new Vanzare<>();
+
+		A.setNume("Adrian");
+		a.setPret(20000);
+		b.setPret(60000);
+		c.setPret(15000);
+		
+		a.setSpeed(200);
+		b.setSpeed(250);
+		c.setSpeed(180);
+		
+		Car n= new Car();
+		a.setItem(n);
+		
+		Car m= new Car();
+		b.setItem(m);
+		
+		Car p= new Car();
+		c.setItem(p);
+		
+		A.addVanzari(a);
+		A.addVanzari(b);
+		A.addVanzari(c);
+		
+		
+		for(int i=0;i<3;i++) {
+			System.out.println(A.getVanzare(i).getSpeed());
+		}
+		A.mysort();
+		
+		for(int i=0;i<3;i++) {
+			System.out.println(A.getVanzare(i).getSpeed());
+		}
+		
+		
+		
+	}
+
+}

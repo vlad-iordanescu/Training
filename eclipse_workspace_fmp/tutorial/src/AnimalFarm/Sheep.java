@@ -1,0 +1,12 @@
+package AnimalFarm;
+
+class Sheep implements AnimalProp {
+	@Override
+	public String getUsage() {
+		return "Wool";
+	}
+
+	@Override
+	public void setUsage(String NewUsage) {
+	};
+}

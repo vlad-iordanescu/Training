@@ -1,0 +1,15 @@
+package AbstractWeaponsDealer;
+
+public abstract class AbstractWeaponFactory {
+	public String Name;
+	public String Type;
+	public String Ammotype;
+	public int AmmoNumber;
+	public abstract String getType();
+	public abstract void  setType();
+	public abstract void setAmmoType();
+	public abstract void setAmmoNumber();
+	public abstract String getAmmoType();
+	public abstract int getAmmoNumber();
+	
+}

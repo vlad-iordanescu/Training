@@ -1,0 +1,5 @@
+package com.crispico.dao;
+
+public interface ClientDao {
+
+}

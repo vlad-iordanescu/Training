@@ -1,0 +1,40 @@
+package AnimalFarm;
+
+public interface AnimalProp {
+	String getUsage();
+	void setUsage(String NewUsage);
+	
+	class Pig implements AnimalProp {
+		public String getUsage()
+		{
+			return "Meat";
+		}
+	}
+	
+	class Chicken implements AnimalProp {
+		public String getUsage()
+		{
+			return "Eggs";
+		}
+	}
+	
+	class Sheep implements AnimalProp {
+		public String getUsage()
+		{
+			return "Wool";
+		}
+	}
+	
+	class Unknown implements AnimalProp {
+		protected String Usage;
+		public String getUsage()
+		{
+			return "Unknown";
+		}
+		public void setUsage(String NewUsage)
+		{
+			Usage = NewUsage;
+		}
+	}
+	
+}

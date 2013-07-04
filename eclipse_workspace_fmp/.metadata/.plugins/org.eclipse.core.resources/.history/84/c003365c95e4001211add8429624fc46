@@ -1,0 +1,47 @@
+package com.crispico.dao.impl;
+
+import java.util.Set;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.crispica.model.*;
+import com.crispico.dao.*;
+
+public class CompanyJPADao implements CompanyDao {
+
+	static EntityManagerFactory enf = Persistence
+			.createEntityManagerFactory("hibernate_demo");
+	static EntityManager en = enf.createEntityManager();
+
+	@Override
+	public void serverOrUpdate(Company company) {
+		if(en.contains(company))
+		en.merge(company);
+		else {
+			en.persist(company);
+			en.getTransaction().commit();
+		}
+
+	}
+
+	@Override
+	public Company loadByID(Integer id) {
+		return en.find(Company.class, 1);
+	}
+
+	@Override
+	public Set<Company> loadAll() {
+		 Query query = en.createQuery("select c from Company c");
+		    return (Set<Company>) query.getResultList();
+	}
+
+	@Override
+	public void remove(Company company) {
+		en.remove(company);
+
+	}
+
+}

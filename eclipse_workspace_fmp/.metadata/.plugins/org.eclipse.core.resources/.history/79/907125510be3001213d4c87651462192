@@ -1,0 +1,16 @@
+package vanzareMasini;
+
+import java.util.Collection;
+
+public class Main {
+	
+	
+	public <T> void sort(AgentDeVanzare<T> t) {
+		Collections.sort(t.vanzari<T>)
+	}
+	
+	public static void main() {
+		
+	}
+
+}

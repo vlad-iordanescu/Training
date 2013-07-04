@@ -1,0 +1,16 @@
+package com.crispico.dao;
+
+import com.crispica.model.*;
+
+public interface ClientDao {
+	
+	public void ServerOrUpdate(Client client);
+	
+	public void LoadByID();
+	
+	public void LoadAll();
+	
+	public void Remove();
+	
+
+}

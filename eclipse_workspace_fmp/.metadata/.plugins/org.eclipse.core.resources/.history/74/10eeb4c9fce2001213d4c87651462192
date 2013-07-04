@@ -1,0 +1,62 @@
+package WordCount;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadWord {
+
+	public static Map readFile(File file) {
+
+		FileReader reader = null;
+		BufferedReader bufferreader = null;
+		// StringBuilder ab = new StringBuilder();
+		Number nr = new Number();
+		Map map = new Map();
+
+		try {
+
+			reader = new FileReader(file);
+			bufferreader = new BufferedReader(reader);
+
+			String line = null;
+
+			while ((line = bufferreader.readLine()) != null) {
+
+				String[] cuvinte = line.split(" ");
+
+				for (int i = 0; i < cuvinte.length; i++) {
+					if (!map.wordmap.containsKey(cuvinte[i])) {
+						nr = new Number();
+						nr.count = 1;
+						map.wordmap.put(cuvinte[i], nr);
+					} else {
+						nr = map.wordmap.get(cuvinte[i]);
+						nr.count = +1;
+						map.wordmap.remove(cuvinte[i]);
+						map.wordmap.put(cuvinte[i], nr);
+					}
+				}
+				// ab.append(line);
+				// ab.append(System.getProperty("line separator"));
+			}
+
+			// bufferreader.readLine();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (bufferreader != null) {
+					bufferreader.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return map; // ab.toString();
+	}
+
+}

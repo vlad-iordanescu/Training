@@ -1,0 +1,12 @@
+package vanzareMasini;
+
+import java.awt.List;
+
+public class AgentDeVanzare<T> {
+	
+	private String nume;
+	
+	private List<Cars<T>> Vanzari;
+	
+
+}

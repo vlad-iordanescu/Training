@@ -1,0 +1,26 @@
+package Shop;
+
+public class ThreadConsumator extends Thread{
+	
+	private ListaProduse lst = new ListaProduse();
+	private int index;
+	
+	public ThreadConsumator(ListaProduse lst){
+		this.lst = lst;
+	}
+	
+	public void setIndex(int indx) {
+		index = indx;
+	}
+	
+	public void run() {
+		Produs prod = new Produs();
+		prod = lst.getProdus(index);
+		try {
+			ThreadProducator.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

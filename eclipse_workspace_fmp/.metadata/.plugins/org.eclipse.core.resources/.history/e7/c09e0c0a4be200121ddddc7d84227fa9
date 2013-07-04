@@ -1,0 +1,20 @@
+package AnimalFarm;
+
+
+
+public class AnimalFactory {
+	
+	public AnimalProp CreateAnimal (String Usage)
+	{
+		if (Usage.equals("Meat"))
+			return Pig;
+		else if (Usage.equals("Eggs"))
+			return Chicken;
+		else if (Usage.equals("Wool"))
+			return Sheep;
+		else
+			return Unknown;
+	}
+
+
+}

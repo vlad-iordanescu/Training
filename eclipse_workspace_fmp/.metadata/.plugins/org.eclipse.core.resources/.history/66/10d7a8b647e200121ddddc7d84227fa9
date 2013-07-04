@@ -1,0 +1,11 @@
+package AnimalFarm;
+import java.util.*;
+
+public class AnimalCreation implements AnimalProp {
+
+	public int createProduct(int ID) {
+		
+	}
+	
+
+}

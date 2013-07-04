@@ -1,0 +1,9 @@
+package AbstractWeaponsDealer;
+
+public class Client {
+	public static void main(String args[]) {
+		WeaponsShop x = new WeaponsShop();
+		Object receive  = x.Create(args[0]);
+
+	}
+}

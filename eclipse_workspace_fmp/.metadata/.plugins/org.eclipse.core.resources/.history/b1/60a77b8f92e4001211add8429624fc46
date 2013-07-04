@@ -1,0 +1,5 @@
+package com.crispico.dao.impl;
+
+public class CompanyJPADao {
+
+}

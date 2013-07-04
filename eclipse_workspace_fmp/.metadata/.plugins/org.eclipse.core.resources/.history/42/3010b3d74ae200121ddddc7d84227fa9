@@ -1,0 +1,14 @@
+package AnimalFarm;
+
+
+
+public class AnimalFactory implements AnimalProp {
+	
+	public AnimalProp CreateAnimal (String Usage)
+	{
+		if (Usage.equals("Meat"))
+			return Pig
+	}
+
+
+}

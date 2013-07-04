@@ -1,0 +1,19 @@
+package AnimalFarm;
+import java.util.*;
+
+
+public class AnimalCreation implements AnimalProp {
+
+	public Animal createProduct(int ID) {
+		Animal y = new Animal();
+	}
+	
+	public void registerProduct(int ID, String Name, int IDFather, int IDMother){
+		Animal x = new Animal();
+		x.ID = ID;
+		x.Name = Name;
+		x.IDFather = IDFather;
+		x.IDMother = IDMother;
+	}
+
+}

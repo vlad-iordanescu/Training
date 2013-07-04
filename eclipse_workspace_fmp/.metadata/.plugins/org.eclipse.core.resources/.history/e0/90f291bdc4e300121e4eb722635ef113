@@ -1,0 +1,25 @@
+package Shop;
+
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class ListaProduse2 {
+
+	private BlockingQueue<Produs> lista = new LinkedBlockingQueue<Produs>();
+	
+
+	public void addToListaProdus(Produs prod) {
+
+			lista.add(prod);
+			System.out.println("Produs added");
+
+	}
+
+	public Produs getProdus() throws InterruptedException {
+
+
+			return lista.take();
+	}
+	
+}

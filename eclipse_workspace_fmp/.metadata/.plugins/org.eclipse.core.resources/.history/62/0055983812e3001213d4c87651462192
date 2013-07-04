@@ -1,0 +1,21 @@
+package vanzareMasini;
+
+public class Main {
+	
+	
+	public <T> void mysort(AgentDeVanzare<T> t) {
+		t.mysort();
+	}
+	
+	public static void main() {
+		AgentDeVanzare<Car> A = new AgentDeVanzare<Integer>();
+		Vanzare<Car> a;
+		Vanzare<Car> b;
+		Vanzare<Car> c;
+
+		
+		A.setNume("Adrian");
+		B.setNume("Alexandru");
+	}
+
+}

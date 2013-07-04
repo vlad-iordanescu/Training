@@ -1,0 +1,27 @@
+package Lock;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class Counter {
+	
+	Lock l = new ReentrantLock();
+	
+	private int value;
+
+	public int getValue() {
+		return value;
+	}
+
+	public void increment() {
+		l.lock();
+		try {
+			this.value++;
+		} finally {
+			l.unlock();
+		}
+		
+	}
+	
+
+}

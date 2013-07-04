@@ -1,0 +1,18 @@
+package AbstractWeaponsDealer;
+
+public class Client {
+	public static void main(String args[]) {
+		WeaponsShop x = new WeaponsShop();
+		Object receive = new Object();
+		MachineGunsFactory gunM = x.CreateM(args[0]);
+		ShotgunsFactory gunS = x.CreateS(args[0]);
+		HandGunsFactory gunH = x.CreateH(args[0]);
+		if (gunM != null) {
+			receive = new TommyGun();
+		} else if (gunS != null) {
+			receive = new Beretta();
+		} else if (gunH != null) {
+			receive = new Deagle();
+		}
+	}
+}

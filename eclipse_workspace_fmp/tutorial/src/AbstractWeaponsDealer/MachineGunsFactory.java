@@ -1,0 +1,33 @@
+package AbstractWeaponsDealer;
+
+public class MachineGunsFactory extends AbstractWeaponFactory {
+	public String Name;
+	private String Type;
+	private String Ammotype;
+	private int AmmoNumber;
+
+	public String getType() {
+		return Type;
+	}
+
+	public void setType(String prop) {
+
+	}
+
+	public void setAmmoType(String prop) {
+
+	}
+
+	public void setAmmoNumber(int prop) {
+
+	}
+
+	public String getAmmoType() {
+		return Ammotype;
+	}
+
+	public int getAmmoNumber() {
+		return AmmoNumber;
+	}
+
+}

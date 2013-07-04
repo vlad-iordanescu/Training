@@ -1,0 +1,20 @@
+package AbstractWeaponsDealer;
+
+public class WeaponsShop {
+
+	public static MachineGuns CreateM(String Name) {
+		if (Name.equals("TommyGun"))
+			return new TommyGun();
+	}
+
+	public static Shotguns CreateS(String Name) {
+		if (Name.equals("Beretta"))
+			return new Beretta();
+	}
+
+	public static HandGuns CreateH(String Name) {
+		if (Name.equals("Deagle"))
+			return new Deagle();
+	}
+
+}

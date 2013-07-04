@@ -1,0 +1,8 @@
+package AnimalFarm;
+
+public interface AnimalProp {
+	String getUsage();
+
+	void setUsage(String NewUsage);
+
+}

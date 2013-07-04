@@ -1,0 +1,10 @@
+package AnimalFarm;
+
+public class Animal {
+	int NrOfLegs;
+	int Height;
+	int Width;
+	String Mood;
+	Boolean Fertil;
+		
+}

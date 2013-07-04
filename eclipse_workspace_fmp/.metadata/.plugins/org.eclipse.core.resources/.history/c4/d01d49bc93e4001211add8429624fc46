@@ -1,0 +1,41 @@
+package com.crispico.dao.impl;
+
+import java.util.Set;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.crispica.model.*;
+import com.crispico.dao.*;
+
+public class CompanyJPADao implements CompanyDao {
+
+	static EntityManagerFactory enf = Persistence
+			.createEntityManagerFactory("hibernate_demo");
+	static EntityManager en = enf.createEntityManager();
+
+	@Override
+	public void serverOrUpdate(Company company) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Company loadByID(Integer id) {
+		return en.find(Company.class, 1);
+	}
+
+	@Override
+	public Set<Company> loadAll() {
+		
+		return null;
+	}
+
+	@Override
+	public void remove(Company company) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

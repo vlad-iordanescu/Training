@@ -1,0 +1,7 @@
+package AnimalFarm;
+
+public interface AnimalProp {
+	public void registerProduct(int ID, String Name, int IDFather, int IDMother);
+	
+	
+}

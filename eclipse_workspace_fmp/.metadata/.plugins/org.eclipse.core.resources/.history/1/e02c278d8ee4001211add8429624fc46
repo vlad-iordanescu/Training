@@ -1,0 +1,65 @@
+package com.crispico.test;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+import javax.persistence.*;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.crispica.model.*;
+
+public class TestHibernate {
+
+	static EntityManagerFactory enf;
+	static EntityManager en;
+
+	@BeforeClass
+	public static void initEntityManager() {
+		enf = Persistence.createEntityManagerFactory("hibernate_demo");
+		en = enf.createEntityManager();
+	}
+
+	@Test
+	public void test() {
+
+		en.getTransaction().begin();
+		Company company = new Company();
+		company.setName("Crispico");
+		company.setCui("Ceva");
+		company.setAddress("asdf");
+		en.persist(company);
+		en.getTransaction().commit();
+		assertEquals(1, 1);
+
+		List<Company> companies = en.createQuery("select c from Company c").getResultList();
+		System.out.println(companies.size());
+	}
+
+	@Test
+	public void testLoadCompanies() {
+		List<Company> companies = en.createQuery("select c from Company c").getResultList();
+		System.out.println(companies.size());
+	}
+
+	@Test
+	public void testLoadByID() {
+		System.out.println( en.find(Client.class, 1));
+	}
+	
+	@Test
+	public void remove() {
+		en.remove(en.find(Client.class, 1));
+	}
+
+	@AfterClass
+	public static void closeEMFactory() {
+		en.close();
+		enf.close();
+
+	}
+
+}
