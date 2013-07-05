@@ -1,7 +1,0 @@
-package AbstractWeaponsDealer;
-
-public class WeaponsShop extends Shotguns{
-	public static void main(String args[]){
-		
-	}
-}

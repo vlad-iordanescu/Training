@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 width="400" height="110">
+	
+	
+	
+	<fx:Script>
+		<![CDATA[
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			import mx.events.FlexEvent;
+			import mx.managers.PopUpManager;
+			
+			import spark.components.TitleWindow;
+			
+			
+			private var nameLogin:String = new String();
+			
+			
+			
+			protected function login(event:MouseEvent):void {
+				nameLogin = idTextInput.text;
+				companyService.sayHello(nameLogin);
+			}
+			
+			
+		]]>
+	</fx:Script>
+	
+
+	<fx:Declarations>
+		<s:RemoteObject id="companyService" destination="companyService">
+			<s:method name="sayHello" result="Alert.show(event.result + '')"/>	
+		</s:RemoteObject>
+	</fx:Declarations>
+	
+	<s:Form width="100%">
+		<s:FormItem width="100%">
+			<s:Label text="Username: "/>
+			<s:TextInput id="idTextInput" height="23" enabled="true" text=""/>
+			<s:Button id="log" width="128" label="Login" click="login(event)"/>	
+		</s:FormItem>
+		</s:Form>
+	
+	
+	
+	
+</s:Group>

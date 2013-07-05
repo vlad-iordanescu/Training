@@ -1,7 +1,0 @@
-package AbstractWeaponsDealer;
-
-public abstract class AbstractWeaponFactory {
-	public String Name;
-	public abstract String getType();
-	
-}

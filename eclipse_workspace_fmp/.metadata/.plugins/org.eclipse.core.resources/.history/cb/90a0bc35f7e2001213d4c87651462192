@@ -1,8 +1,0 @@
-package WordCount;
-import java.util.ArrayList;
-
-public class Map {
-	
-	Map<String, Number> wordmap = new HashMap<String, Number>();
-
-}

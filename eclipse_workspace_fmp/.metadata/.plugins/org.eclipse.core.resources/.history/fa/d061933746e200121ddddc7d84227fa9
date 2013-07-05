@@ -1,8 +1,0 @@
-package AnimalFarm;
-
-public class AnimalCreation implements AnimalProp {
-
-	
-	
-
-}

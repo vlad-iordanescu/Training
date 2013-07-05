@@ -1,6 +1,0 @@
-package WordCount;
-
-public class Number {
-	int count;
-
-}
